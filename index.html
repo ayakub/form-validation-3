@@ -16,13 +16,13 @@
 
         <div>
             <label for="email" style="padding-right: 120px;">Email:</label><br>
-   <input type="text" id="txtEmail"  onkeyup="ValidateEmail();"/><br>
+   <input type="text" id="txtEmail"  oninput="ValidateEmail();"/><br>
 <span id="lblError" style="color: red"></span>
 </div>
 
 <div>
     <label for="age" style="padding-right: 120px;">Age:</label> <br>
-    <input type="number" id="age" min="-99" max="99" onclick="ValidateAge();" aria-disabled="false" style="padding-right:100px ;"> <br>
+    <input type="number" id="age" min="-99" max="99" oninput="ValidateAge();"  style="padding-right:100px ;"> <br>
     <span id="ageError" style="color: red"></span>
 </div><br>
 
