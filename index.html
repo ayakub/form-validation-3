@@ -11,11 +11,6 @@
          <div>
              <label for="name" style="padding-right: 120px;">Name:</label><br>
            <input type="text" style="padding-left: px;" id="names" oninput="ValidateName();" required><br>
-           <script>
-               var form = document.getElementById('form').addEventListener('submit', (e)=> {
-                   e.preventDefault();
-               })
-           </script>
              <span id="nameError" style="color: red;"></span>
         </div>
 
