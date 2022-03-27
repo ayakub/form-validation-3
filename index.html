@@ -7,22 +7,27 @@
     <title>Form Validator</title>
 </head>
 <body>
-    <form style="text-align: center; margin-top: 50px;" >
+    <form style="text-align: center; margin-top: 50px;" id="form">
          <div>
              <label for="name" style="padding-right: 120px;">Name:</label><br>
-           <input type="text" style="padding-left: px;" id="names" oninput="ValidateName();"><br>
+           <input type="text" style="padding-left: px;" id="names" oninput="ValidateName();" required><br>
+           <script>
+               var form = document.getElementById('form').addEventListener('submit', (e)=> {
+                   e.preventDefault();
+               })
+           </script>
              <span id="nameError" style="color: red;"></span>
         </div>
 
         <div>
-            <label for="email" style="padding-right: 120px;">Email:</label><br>
-   <input type="text" id="txtEmail"  oninput="ValidateEmail();"/><br>
+            <label for="email" style="padding-right: 120px;" >Email:</label><br>
+   <input type="text" id="txtEmail"  oninput="ValidateEmail();" required/><br>
 <span id="lblError" style="color: red"></span>
 </div>
 
 <div>
     <label for="age" style="padding-right: 120px;">Age:</label> <br>
-    <input type="number" id="age" min="-99" max="99" oninput="ValidateAge();"  style="padding-right:100px ;"> <br>
+    <input type="number" id="age" min="-99" max="99" oninput="ValidateAge();"  style="padding-right:100px ;" required> <br>
     <span id="ageError" style="color: red"></span>
 </div><br>
 
